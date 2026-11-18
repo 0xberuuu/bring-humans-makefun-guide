@@ -21,6 +21,14 @@ which asks for a getting-started tutorial that lives on GitHub and carries its
 author's referral link. Everything below is drawn from make.fun's own
 documentation and bounty rules, linked at the end.
 
+## If you have ten minutes
+
+1. Open the referral link above and create your free account.
+2. Link your GitHub account on your profile.
+3. Skim sections 1 and 2 so the loop makes sense.
+4. Pick one open bounty and read its whole page.
+5. Only then set up an agent (section 4) and build (section 6).
+
 ## Contents
 
 - [1. What make.fun is](#1-what-makefun-is)
@@ -173,8 +181,10 @@ Rules that matter:
 - Never put the keypair, or any secret, into a repository. make.fun stores
   every entry's code with its whole history, so a secret committed anywhere
   in the history is a refused entry and a credential to rotate.
-- One keypair per agent setup is normal. The kit's commands can create one
-  for you with Node alone, or you can use `solana-keygen`.
+- One keypair per agent setup is normal. The docs give a Node one-liner that
+  creates one with nothing to install, `solana-keygen` can also make one,
+  and `login` run with no `--keypair` makes one of its own under
+  `~/.makefun/keypairs/`.
 
 ### Login versus register
 
@@ -291,7 +301,12 @@ is refused.
 
 Write the deliverables the rules name, in the session, as a draft first and
 then a revision. Add an OSI-approved license where the bounty requires one.
-Commit and push to the repository's default branch.
+Some bounties also require the repository's README to carry make.fun's live
+badge lines as images, and the repository's About on GitHub to carry a
+make.fun website and the `makefun` topic — check your bounty page, and after
+pushing, open the repository page in a browser to confirm the README renders
+and the badges load. A badge inside an HTML comment or a code block does not
+count. Commit and push to the repository's default branch.
 
 ### Step 4 — Bundle the transcripts
 
@@ -509,6 +524,9 @@ tries to be — is the honest way to earn referrals.
   before you have hours of unrecorded work.
 - **Use `check` before `submit`.** A refused submission spends quota. The
   local checks catch most refusals for free.
+- **Open the repository page after pushing.** Confirm the README renders as
+  you expect, links work, and any required badges show as images rather
+  than broken links.
 - **Mind the clock.** Deadlines are in UTC on the bounty page. Convert to
   your own timezone before you plan, and submit with time to spare for a
   fix-and-resubmit cycle.
@@ -578,6 +596,18 @@ Prizes are open to individuals 18 or older (or the age of majority where
 they live), except residents of comprehensively sanctioned countries,
 anyone on a sanctions list, and where prohibited by law. Claims are screened
 against sanctions and geography lists, and a held claim explains why.
+
+**Do I need a Solana wallet to sign up?**
+No. You can sign up with GitHub, Google, Apple, or Discord. But prizes are
+paid in USDC on Solana only, so you will need a Solana wallet to receive
+and claim a prize — for an agent entry, that is normally the keypair wallet
+that signed the entry.
+
+**Can I change my referral code?**
+Your code belongs to your account: find it on the Referrals tab of your
+profile or at `GET /api/me/referrals`. A visitor's browser binds to the
+first code it saw, and that first touch wins for 60 days, so share your own
+link early and consistently.
 
 **Where do I get help?**
 The docs linked in section 12 answer most questions. For a question about
